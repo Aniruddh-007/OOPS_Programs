@@ -16,7 +16,7 @@ int main()
     printf("%d",number);
 }
 
-//FUNCTION 
+//FUNCTION DEFINITION
 int rev(int x)
 {
     //Initializing variables 
