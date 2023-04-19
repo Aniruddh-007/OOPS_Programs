@@ -1,32 +1,31 @@
-#include <stdio.h>
-//Function Prototype
-int rev(int x);
-
-int main()
+int reverse(long int x)
 {
-    //Initializing variables 
-    int num , number ;
-    //printing statement
-    printf("Enter Number : ");
-    //Getting the value from user
-    scanf("%d",&num);
-    //Function Call
-    number = rev(num);
-    //Printing the final value 
-    printf("%d",number);
-}
-
-//FUNCTION DEFINITION
-int rev(int x)
-{
-    //Initializing variables 
-    int reverse , rem ;
-    while (x != 0)
-    {
-        rem = x % 10 ;
-        reverse = reverse * 10 + rem ;
-        x = x / 10 ;
+    long int dup;
+    int rem ;
+    long int rev = 0;
+    int negative;
+    dup = x;
+    if (x>=0){
+        negative =1;
+        dup *= negative ;
     }
-    //Returning the Value
-    return reverse ;
+    else{
+        negative = -1;
+        dup *= negative;
+    }
+    while (dup > 0)
+    {
+        rem = dup % 10;
+        rev = rev * 10 + rem;
+        dup = dup / 10 ;
+    }
+    rev *= negative;
+    if (rev >= -2147483648 && rev <= 2147483647)
+    {
+        return rev ;
+    }
+    else
+    {
+        return 0;
+    }   
 }
