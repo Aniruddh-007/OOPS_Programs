@@ -1,45 +1,27 @@
-#include <stdio.h>
-//Function Prototype
-int ispalindrome(int temp , int x);
-int main()
+bool isPalindrome(long int x)
 {
-    //Initializing Variables 
-    int num ;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    //Duplicate Variable initialization 
-    int temp = num ;
-    //Function Call
-    int a = ispalindrome(temp , num);
-    //Checking condition to print
-    if (a == 1)
+    if (x < 0)
     {
-        printf("Given number %d is a Palindrome",num);
-    }
-    else 
-    {
-        printf("Given number %d is not a Palindrome",num);
-    }
-    return 0 ;
-}
-
-//Function Definition 
-int ispalindrome(int temp , int x)
-{
-    int r;
-    //LOGIC
-    while (x > 0)
-    {
-        r = r * 10 + x % 10;
-        x = x / 10;
-    }
-    //Checking if it is a Palindrome
-    if (temp == r)
-    {
-        return 1 ; 
+        return false;
     }
     else
     {
-        return 0 ; 
+        int rem ;
+        long int dup = x;
+        long int rev = 0;
+        while (dup > 0){
+            rem = dup % 10;
+            rev = rev * 10 + rem;
+            dup = dup / 10;
+        }
+        if (rev == x)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+
 }
