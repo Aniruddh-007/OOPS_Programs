@@ -33,10 +33,24 @@ class rectangle : public shape
     {
         length = x ;
         breadth = y ;
-        int area()
+    }
+    int area()
         {
             return length * breadth ;
         }
+};
+
+class triangle : public shape
+{
+    public :
+    triangle(int x , int y)
+    {
+        length = x ;
+        breadth = y ;
+    }
+    float area()
+    {
+        return (0.5) * length * breadth;
     }
 };
 
@@ -65,10 +79,29 @@ class parallelogram : public shape
     {
         return height * breadth ;
     }
-}
+};
+
 int main() 
 {
-    square s(10);
-    cout<<s.area();
+    //Area Square
+    square s(2);
+    cout<<"Area of Square : "<<s.area()<<endl;
+    
+    //Area Rectangle
+    rectangle r(2 , 4);
+    cout<<"Area of Rectangle : "<<r.area()<<endl;
+    
+    //Area Triangle
+    triangle t(2 , 4);
+    cout<<"Area of Triangle : "<<t.area()<<endl;
+
+    //Area Circle    
+    circle c(2);
+    cout<<"Area of Circle : "<<c.area()<<endl;
+    
+    //Area Parallelogram
+    parallelogram p(2 , 4);
+    cout<<"Area of Parallelogram : "<<p.area()<<endl;
+    
     return 0;
 }
