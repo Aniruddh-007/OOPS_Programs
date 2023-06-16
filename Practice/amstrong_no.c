@@ -1,3 +1,4 @@
+//AMSTRONG NUMBER 
 #include <stdio.h> 
   
 void main() { 
