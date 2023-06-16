@@ -1,3 +1,4 @@
+//LEAST COMMON MULTIPLIER 
 #include <stdio.h> 
  int lcm(int a,int b); 
  int main(){ 
